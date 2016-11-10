@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -26,7 +26,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console',           '3.1.1'
+  gem 'web-console',           '2.3.0'
   gem 'listen',                '3.0.8'
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
@@ -38,3 +38,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'rails_12factor', group: :production 
+
+ruby "2.1.8"
