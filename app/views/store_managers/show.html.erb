@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @store_manager.email %>
+</p>
+
+<p>
+  <strong>Phone;string:</strong>
+  <%= @store_manager.phone;string %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store_manager.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @store_manager.location_id %>
+</p>
+
+<%= link_to 'Edit', edit_store_manager_path(@store_manager) %> |
+<%= link_to 'Back', store_managers_path %>

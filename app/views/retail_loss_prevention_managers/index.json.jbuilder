@@ -1,0 +1,1 @@
+json.array! @retail_loss_prevention_managers, partial: 'retail_loss_prevention_managers/retail_loss_prevention_manager', as: :retail_loss_prevention_manager

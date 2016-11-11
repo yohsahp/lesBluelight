@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Store Managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Phone;string</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @store_managers.each do |store_manager| %>
+      <tr>
+        <td><%= store_manager.email %></td>
+        <td><%= store_manager.phone;string %></td>
+        <td><%= store_manager.name %></td>
+        <td><%= store_manager.location_id %></td>
+        <td><%= link_to 'Show', store_manager %></td>
+        <td><%= link_to 'Edit', edit_store_manager_path(store_manager) %></td>
+        <td><%= link_to 'Destroy', store_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store manager', new_store_manager_path %>

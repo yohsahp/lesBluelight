@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  check_in_time: 2016-11-10 18:57:07
+  check_out_time: 2016-11-10 18:57:07
+  crypt_check_code: MyString
+  officer_id: 1
+  job_id: 1
+
+two:
+  check_in_time: 2016-11-10 18:57:07
+  check_out_time: 2016-11-10 18:57:07
+  crypt_check_code: MyString
+  officer_id: 1
+  job_id: 1

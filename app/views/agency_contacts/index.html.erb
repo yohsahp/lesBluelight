@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Agency Contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agency_contacts.each do |agency_contact| %>
+      <tr>
+        <td><%= agency_contact.name %></td>
+        <td><%= agency_contact.phone %></td>
+        <td><%= agency_contact.email %></td>
+        <td><%= agency_contact.location_id %></td>
+        <td><%= link_to 'Show', agency_contact %></td>
+        <td><%= link_to 'Edit', edit_agency_contact_path(agency_contact) %></td>
+        <td><%= link_to 'Destroy', agency_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agency contact', new_agency_contact_path %>

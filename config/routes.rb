@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :check_ins
+  resources :officers
+  resources :agency_contacts
+  resources :jobs
+  resources :retail_loss_prevention_managers
+  resources :store_managers
+  resources :locations
   root 'application#hello'
   #==================================================================================
   # The priority is based upon order of creation: first created -> highest priority.

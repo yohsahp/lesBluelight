@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @retail_loss_prevention_manager.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @retail_loss_prevention_manager.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @retail_loss_prevention_manager.location_id %>
+</p>
+
+<%= link_to 'Edit', edit_retail_loss_prevention_manager_path(@retail_loss_prevention_manager) %> |
+<%= link_to 'Back', retail_loss_prevention_managers_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Retail Loss Prevention Managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @retail_loss_prevention_managers.each do |retail_loss_prevention_manager| %>
+      <tr>
+        <td><%= retail_loss_prevention_manager.phone %></td>
+        <td><%= retail_loss_prevention_manager.email %></td>
+        <td><%= retail_loss_prevention_manager.location_id %></td>
+        <td><%= link_to 'Show', retail_loss_prevention_manager %></td>
+        <td><%= link_to 'Edit', edit_retail_loss_prevention_manager_path(retail_loss_prevention_manager) %></td>
+        <td><%= link_to 'Destroy', retail_loss_prevention_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Retail loss prevention manager', new_retail_loss_prevention_manager_path %>

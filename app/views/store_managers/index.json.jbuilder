@@ -1,0 +1,1 @@
+json.array! @store_managers, partial: 'store_managers/store_manager', as: :store_manager

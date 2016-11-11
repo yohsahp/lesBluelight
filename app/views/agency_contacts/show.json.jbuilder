@@ -1,0 +1,1 @@
+json.partial! "agency_contacts/agency_contact", agency_contact: @agency_contact

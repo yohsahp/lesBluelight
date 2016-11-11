@@ -1,0 +1,1 @@
+json.array! @agency_contacts, partial: 'agency_contacts/agency_contact', as: :agency_contact

@@ -1,0 +1,1 @@
+json.partial! "retail_loss_prevention_managers/retail_loss_prevention_manager", retail_loss_prevention_manager: @retail_loss_prevention_manager

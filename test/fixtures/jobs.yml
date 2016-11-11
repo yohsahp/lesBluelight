@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-11-10
+  start_time: 2016-11-10 18:50:37
+  end_time: 2016-11-10 18:50:37
+  crypt_code: MyString
+  location_id: 1
+
+two:
+  date: 2016-11-10
+  start_time: 2016-11-10 18:50:37
+  end_time: 2016-11-10 18:50:37
+  crypt_code: MyString
+  location_id: 1
