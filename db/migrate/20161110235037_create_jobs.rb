@@ -9,5 +9,6 @@ class CreateJobs < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :jobs, :location_id
   end
 end

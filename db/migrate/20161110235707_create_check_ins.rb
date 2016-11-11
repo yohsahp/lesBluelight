@@ -9,5 +9,7 @@ class CreateCheckIns < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :check_ins, :officer_id
+    add_index :check_ins, :job_id 
   end
 end

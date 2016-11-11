@@ -7,5 +7,6 @@ class CreateRetailLossPreventionManagers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :retail_loss_prevention_managers, :location_id
   end
 end

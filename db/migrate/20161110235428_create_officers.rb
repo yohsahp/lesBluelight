@@ -8,5 +8,6 @@ class CreateOfficers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :officers, :agency_contact_id
   end
 end

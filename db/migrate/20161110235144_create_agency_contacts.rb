@@ -8,5 +8,6 @@ class CreateAgencyContacts < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :agency_contacts, :location_id
   end
 end

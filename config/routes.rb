@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :assignments
   resources :check_ins
   resources :officers
   resources :agency_contacts
