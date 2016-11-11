@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110235707) do
+ActiveRecord::Schema.define(version: 20161111011856) do
 
   create_table "agency_contacts", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 20161110235707) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "agency_contacts", ["location_id"], name: "index_agency_contacts_on_location_id"
+
+  create_table "assignments", force: :cascade do |t|
+    t.integer  "officer_id"
+    t.integer  "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "assignments", ["job_id"], name: "index_assignments_on_job_id"
+  add_index "assignments", ["officer_id"], name: "index_assignments_on_officer_id"
 
   create_table "check_ins", force: :cascade do |t|
     t.datetime "check_in_time"
@@ -32,6 +44,9 @@ ActiveRecord::Schema.define(version: 20161110235707) do
     t.datetime "updated_at",       null: false
   end
 
+  add_index "check_ins", ["job_id"], name: "index_check_ins_on_job_id"
+  add_index "check_ins", ["officer_id"], name: "index_check_ins_on_officer_id"
+
   create_table "jobs", force: :cascade do |t|
     t.date     "date"
     t.time     "start_time"
@@ -41,6 +56,8 @@ ActiveRecord::Schema.define(version: 20161110235707) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "jobs", ["location_id"], name: "index_jobs_on_location_id"
 
   create_table "locations", force: :cascade do |t|
     t.string   "store_number"
@@ -63,6 +80,8 @@ ActiveRecord::Schema.define(version: 20161110235707) do
     t.datetime "updated_at",        null: false
   end
 
+  add_index "officers", ["agency_contact_id"], name: "index_officers_on_agency_contact_id"
+
   create_table "retail_loss_prevention_managers", force: :cascade do |t|
     t.string   "phone"
     t.string   "email"
@@ -70,6 +89,8 @@ ActiveRecord::Schema.define(version: 20161110235707) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "retail_loss_prevention_managers", ["location_id"], name: "index_retail_loss_prevention_managers_on_location_id"
 
   create_table "store_managers", force: :cascade do |t|
     t.string   "email"
@@ -79,5 +100,7 @@ ActiveRecord::Schema.define(version: 20161110235707) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "store_managers", ["location_id"], name: "index_store_managers_on_location_id"
 
 end
