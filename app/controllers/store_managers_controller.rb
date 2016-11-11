@@ -69,6 +69,6 @@ class StoreManagersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_manager_params
-      params.require(:store_manager).permit(:email, :phone;string, :name, :location_id)
+      params.require(:store_manager).permit(:email, :phone, :name, :location_id)
     end
 end
